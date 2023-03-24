@@ -1,0 +1,12 @@
+p {
+    font-family: "Roboto";
+}
+
+#navbar img {
+    width: 70px;
+}
+
+li:hover {
+    transform: scale(1.05);
+    background-color: rgb(245, 195, 59);
+}

@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.main')
 
-        <title>StockMS</title>
+@section('title','StockMS')
 
-    </head>
-    <body class="antialiased">
-        
-    </body>
-</html>
+@section('content')
+<img src="/img/banner.png" alt="Stock banner image" width="100%">
+@endsection

@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+@extends('layouts.main')
+
+@section('title','Adicionar Produto')
+
+@section('content')
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Produto</title>
     <link rel="stylesheet" href="/css/registerProduct.css">
 </head>
-    <body>
-        <div class="register">
+<div class="register">
             <form method="POST" class="registerForm">
                 <h1>Cadastrar Produto</h1>
 
@@ -88,6 +87,5 @@
 
                 <a href="/product/register" class="btn">Cadastrar</a>
             </form>
-        </div>
-</body>
-</html>
+        </div>    
+@endsection

@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 body {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     margin: 0;
     padding: 0;
 }
 
-.cadastrar {
+.register {
     display: block;
     flex-direction: column;
     align-items: center;
@@ -17,31 +17,31 @@ body {
     background-color: rgb(64, 62, 62);
 }
 
-.formCadastrar {
+.registerForm {
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
     border-radius: 7px;
     padding: 50px;
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
-    gap: 5px
+    gap: 5px;
 }
 
-.formCadastrar h1 {
+.registerForm h1 {
     padding: 30px;
     margin: 0;
     font-weight: 500;
     font-size: 2.3em;
 }
 
-.formCadastrar p {
+.registerForm p {
     display: inline-block;
     font-size: 14px;
     color: #666;
     margin-bottom: 25px;
 }
 
-.formCadastrar input {
+.registerForm input {
     padding: 15px;
     font-size: 14px;
     border: 1px solid #ccc;
@@ -52,12 +52,21 @@ body {
     outline: none;
 }
 
+.registerForm fieldset {
+    padding: 15px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-radius: 4px;
+    transition: all linear 160ms;
+    outline: none;
+}
 
-.formCadastrar input:focus {
+.registerForm input:focus {
     border: 1px solid rgb(245, 195, 59);
 }
 
-.formCadastrar label {
+.registerForm label {
     font-size: 14px;
     font-weight: 600;
 }
@@ -65,7 +74,7 @@ body {
 .btn {
     background-color: rgb(245, 195, 59);
     color: #fff;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     height: 40px;
     border: none;
@@ -73,7 +82,6 @@ body {
     cursor: pointer;
     margin: 0;
     text-align: center;
-
 }
 
 .btn:hover {

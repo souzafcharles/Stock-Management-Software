@@ -34,7 +34,7 @@
                             <a href="/" class="nav-link">Produtos</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/registerProduct" class="nav-link">Adicionar</a>
+                            <a href="/products/create" class="nav-link">Adicionar</a>
                         </li>
                         <li class="nav-item">
                             <a href="/logIn" class="nav-link">Entrar</a>
@@ -51,10 +51,9 @@
         @yield('content')
 
     <footer>
-        <p>Gerencimento de Estoque &copy; 2023</p>
+        <p>StockMS - Gerencimento de Estoque &copy; 2023</p>
     </footer>
-
-        <script type ="module" src = "https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" ></script>
-
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>
 </html>

@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\StockController;
 
-Route::get('/', [ProductController::class, 'index']);
+Route::get('/', [StockController::class, 'index']);
 
-Route::get('/products/create', [ProductController::class, 'create']); 
+Route::get('/stocks/create', [StockController::class, 'create']); 
 
 
 

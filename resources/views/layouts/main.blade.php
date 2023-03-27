@@ -31,10 +31,10 @@
                     </a>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="/" class="nav-link">Produtos</a>
+                            <a href="/" class="nav-link">Estoques</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/products/create" class="nav-link">Adicionar</a>
+                            <a href="/stocks/create" class="nav-link">Adicionar</a>
                         </li>
                         <li class="nav-item">
                             <a href="/logIn" class="nav-link">Entrar</a>

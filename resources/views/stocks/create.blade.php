@@ -5,7 +5,7 @@
 @section('content')
 
 <head>
-    <link rel="stylesheet" href="/css/registerProduct.css">
+    <link rel="stylesheet" href="/css/registerStockProduct.css">
 </head>
 <div class="register">
             <form method="POST" class="registerForm">

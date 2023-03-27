@@ -4,88 +4,56 @@
 
 @section('content')
 
-<head>
-    <link rel="stylesheet" href="/css/registerStockProduct.css">
-</head>
-<div class="register">
-            <form method="POST" class="registerForm">
-                <h1>Cadastrar Produto</h1>
-
-                <label>Código</label>
-                <input type="text" placeholder="Digite o código..." autofocus="true" />
-
-                <label>Nome</label>
-                <input type="text" placeholder="Digite o nome..." autofocus="true" />
-
-                <label>Descrição</label>
-                <input type="text" placeholder="Digite a descrição..." autofocus="true" />
-
-                <label>Fornecedor</label>
-                <input type="text" placeholder="Digite o fornecedor..." autofocus="true" />
-
-                <label>Fabricante</label>
-                <input type="text" placeholder="Digite o fabricante..." autofocus="true" />
-
-                <label>Lote</label>
-                <input type="text" placeholder="Digite o lote..." autofocus="true" />
-
-                <label>Preço</label>
-                <input type="number" placeholder="Digite o preço..." min="0"/>
-
-                <label>Imposto (%)</label>
-                <input type="number" placeholder="Digite a taxa de imposto..." min="0">
-
-                <label>Quantidade em estoque</label>
-                <input type="number" placeholder="Digite quanto há no estoque..." />
-
-                <label>Data de reposição</label>
-                <input type="date" placeholder="Digite a data prevista para reposição..." />
-
-                <fieldset>
-                    <legend>Marque a categoria:</legend>
-                    <div>
-                        <input type="checkbox" id="categoryBakery" name="categoryBakery" value="Bakery">
-                        <label for="categoryBakery">Padaria</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="categoryFood" name="categoryFood" value="Food">
-                        <label for="categoryFood">Alimentos</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="categoryFrozenColdCuts" name="categoryFrozenColdCuts" value="FrozenColdCuts">
-                        <label for="categoryFrozenColdCuts">Congelados & Frios</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="categoryMeatFish" name="categoryMeatFish" value="MeatFish">
-                        <label for="categoryMeatFish">Carnes & Peixes</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="categoryProduceSection" name="categoryProduceSection" value="ProduceSection">
-                        <label for="categoryProduceSection">Hortifruti</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="categoryCleaningSupplies" name="categoryCleaningSupplies" value="CleaningSupplies">
-                        <label for="categoryCleaningSupplies">Produtos de Limpeza</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="categoryPersonalHygiene " name="categoryPersonalHygiene" value="PersonalHygiene">
-                        <label for="categoryPersonalHygiene">Higiene Pessoal</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="categoryBeverages" name="categoryBeverages" value="Beverages">
-                        <label for="categoryBeverages">Bebidas</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="categoryStationery" name="categoryStationery" value="Stationery">
-                        <label for="categoryStationery">Papelaria</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="categoryUtensils" name="categoryUtensils" value="Utensils">
-                        <label for="categoryUtensils">Utensílios</label>
-                    </div>
-                </fieldset>
-
-                <a href="/product/register" class="btn">Cadastrar</a>
-            </form>
-        </div>    
+    <div id="stock-create-container" class="col-md-6 offset-md-3">
+        <h1>Adicione o produto ao estoque:</h1>
+        <form action="/stocks" method="post" enctype="multipart/form-data">
+            @csrf
+            <div class="form-group">
+                <label for="image">Imagem do Produto do Estoque:</label>
+                <input type="file" class="form-control-file" id="image" name="image">
+            </div>
+            <div class="form-group">
+                <label for="title">Produto do Estoque:</label>
+                <input type="text" name="title" id="title" class="form-control" placeholder="Nome do produto...">
+            </div>
+            <div class="form-group">
+                <label for="date">Data de cadastro:</label>
+                <input type="date" name="date" id="date" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="supplier">Fornecedor:</label>
+                <input type="text" name="supplier" id="supplier" class="form-control" id="city" placeholder="Nome do fornecedor....">
+            </div>
+            <div class="form-group">
+                <label for="title">O produto é importado?</label>
+                <select class="form-control" id="imported" name="imported">
+                    <option value="0">Nao</option>
+                    <option value="1">Sim</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="title">Descrição:</label>
+                <textarea name="description" class="form-control" id="description" placeholder="Observações obre o produto..."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="items">Adicione itens de infraestrutura:</label>
+                <div class="form-group">
+                    <input type="checkbox" name="items[]" value="Palete"> Palete
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" name="items[]" value="PVC"> Plástico PVC
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" name="items[]" value="Caixa Plástica"> Caixa Plástica
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" name="items[]" value="Caixa de Papelao"> Caixa de Papelão
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" name="items[]" value="Refrigeracao"> Refrigeração
+                </div>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Criar Estoque">
+        </form>
+    </div>  
 @endsection

@@ -1,9 +1,6 @@
 @extends('layouts.main')
-
 @section('title','Adicionar Produto')
-
 @section('content')
-
     <div id="stock-create-container" class="col-md-6 offset-md-3">
         <h1>Adicione o produto ao estoque:</h1>
         <form action="/stocks" method="post" enctype="multipart/form-data">

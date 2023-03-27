@@ -6,8 +6,12 @@
 
     <div id="stock-create-container" class="col-md-6 offset-md-3">
         <h1>Adicione o produto ao estoque:</h1>
-        <form action="/stocks" method="POST">
+        <form action="/stocks" method="post" enctype="multipart/form-data">
             @csrf
+            <div class="form-group">
+                <label for="image">Imagem do Produto do Estoque:</label>
+                <input type="file" class="form-control-file" id="image" name="image">
+            </div>
             <div class="form-group">
                 <label for="title">Produto do Estoque:</label>
                 <input type="text" name="title" id="title" class="form-control" placeholder="Nome do produto...">

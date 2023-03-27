@@ -16,7 +16,20 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StockController;
 
 Route::get('/', [StockController::class, 'index']);
-
-Route::get('/stocks/create', [StockController::class, 'create']); 
-
+Route::get('/stocks/create', [StockController::class, 'create']);
+Route::get('/stocks/{id}', [StockController::class, 'show']);
 Route::post('/stocks', [StockController::class, 'store']);
+
+/*
+Route::delete('/stocks/{id}', [StockController::class, 'destroy'])->middleware('auth');
+Route::get('/stocks/edit/{id}', [StockController::class, 'edit'])->middleware('auth');
+Route::put('/stocks/update/{id}', [StockController::class, 'update'])->middleware('auth');
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/dashboard', [StockController::class, 'dashboard'])->middleware('auth');
+Route::post('/stocks/join/{id}', [StockController::class, 'joinStock'])->middleware('auth');
+Route::delete('/stocks/leave/{id}', [StockController::class, 'leaveStock'])->middleware('auth');
+*/

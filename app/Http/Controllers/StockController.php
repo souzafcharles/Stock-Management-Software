@@ -19,6 +19,7 @@ class StockController extends Controller
         $stock->supplier= $request->supplier;
         $stock->imported = $request->imported;
         $stock->description = $request->description;
+        $stock->items = $request->items;
 
         // Image Upload
         if ($request->hasFile('image') && $request->file('image')->isValid()) {

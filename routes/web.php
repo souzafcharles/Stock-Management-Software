@@ -19,6 +19,8 @@ Route::get('/', [StockController::class, 'index']);
 
 Route::get('/stocks/create', [StockController::class, 'create']); 
 
+Route::post('/stocks', [StockController::class, 'store']);
+
 
 
 

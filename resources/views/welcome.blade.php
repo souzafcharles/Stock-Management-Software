@@ -1,7 +1,5 @@
 @extends('layouts.main')
-
 @section('title','StockMS')
-
 @section('content')
     <div id="search-container" class="col-md-12">
         <h1>Busque um estoque</h1>

@@ -31,6 +31,24 @@
                 <label for="title">Descrição:</label>
                 <textarea name="description" class="form-control" id="description" placeholder="Observações obre o produto..."></textarea>
             </div>
+            <div class="form-group">
+                <label for="items">Adicione itens de infraestrutura:</label>
+                <div class="form-group">
+                    <input type="checkbox" name="items[]" value="Palete"> Palete
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" name="items[]" value="PVC"> Plástico PVC
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" name="items[]" value="Caixa Plástica"> Caixa Plástica
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" name="items[]" value="Caixa de Papelao"> Caixa de Papelão
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" name="items[]" value="Refrigeracao"> Refrigeração
+                </div>
+            </div>
             <input type="submit" class="btn btn-primary" value="Criar Estoque">
         </form>
     </div>  

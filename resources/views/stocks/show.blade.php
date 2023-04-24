@@ -9,9 +9,10 @@
       <div id="info-container" class="col-md-6">
         <h1>{{ $stock->title }}</h1>
         <p class="stock-supplier"><ion-icon name="person-outline"></ion-icon> {{ $stock->supplier }}</p>
-        <p class="stocks-quantity"><ion-icon name="stats-chart-outline"></ion-icon> Quantidade de Itens</p>
+        <!-- <p class="stocks-quantity"><ion-icon name="stats-chart-outline"></ion-icon> Quantidade de Itens</p> -->
         <p class="stock-manufacturer"><ion-icon name="business-outline"></ion-icon>Fabricante</p>
-        <a href="#" class="btn btn-primary" id='stock-submit'>Confirmar informações</a>
+        <!-- <p class="stock-owner"><ion-icon name="star-outline"></ion-icon>{{ $stockOwner['name'] }}</p>
+        <a href="#" class="btn btn-primary" id='stock-submit'>Confirmar informações</a> -->
         <h3>O armazenamento conta com:</h3>
         <ul id="items-list">
             @foreach($stock->items as $item)

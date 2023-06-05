@@ -12,7 +12,7 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Nome</th>
-                    <th scope="col">Participantes</th>
+                    <th scope="col">Quantidade</th>
                     <th scope="col">Ações</th>
                 </tr>
             </thead>
@@ -21,7 +21,7 @@
                     <tr>
                         <td scrope="row">{{ $loop->index + 1 }}</td>
                         <td><a href="/stocks/{{ $stock->id }}">{{ $stock->title }}</a></td>
-                        <td>0</td>
+                        <td>{{ $stock->quantity }}</td>
                         <td>
                             <a href="/stocks/edit/{{ $stock->id }}" class="btn btn-info edit-btn"><ion-icon name="create-outline"></ion-icon> Editar</a>
                             <form action="/stocks/{{ $stock->id }}" method="POST">

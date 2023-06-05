@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use App\Models\Stock;
 use App\Models\User;
 use Carbon\Carbon;
+
 class StockController extends Controller
 {
     public function index(){
@@ -27,11 +28,17 @@ class StockController extends Controller
     public function store(Request $request){
         $stock = new Stock;
         $stock->title = $request->title;
+        $stock->quantity = $request->quantity;
         $stock->date = Carbon::now();
         $stock->supplier= $request->supplier;
         $stock->imported = $request->imported;
         $stock->description = $request->description;
-        $stock->items = $request->items;
+
+        if (is_null($request->items)) {
+            $stock->items = [];
+        } else {
+            $stock->items = $request->items;
+        }
 
         // Image Upload
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
@@ -42,11 +49,12 @@ class StockController extends Controller
             $stock->image = $imageName;
         }
 
+
         $user = auth()->user();
         $stock->user_id = $user->id;
 
         $stock->save();
-        return redirect('/')->with('msg', 'Estoque do produto criado com sucesso!');
+        return redirect('/dashboard')->with('msg', 'Estoque do produto criado com sucesso!');
     }
 
     public function show($id){

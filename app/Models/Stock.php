@@ -13,6 +13,7 @@ class Stock extends Model
     ];
 
     protected $dates = ['date'];
+    protected $quantities = ['quantity'];
 
     protected $guarded = [];
 

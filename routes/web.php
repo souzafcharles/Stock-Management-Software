@@ -22,9 +22,4 @@ Route::post('/stocks', [StockController::class, 'store']);
 Route::delete('/stocks/{id}', [StockController::class, 'destroy'])->middleware('auth');
 Route::get('/stocks/edit/{id}', [StockController::class, 'edit'])->middleware('auth');
 Route::put('/stocks/update/{id}', [StockController::class, 'update'])->middleware('auth');
-
-Route::get('/contact', function () {
-    return view('contact');
-});
-
 Route::get('/dashboard', [StockController::class, 'dashboard'])->middleware('auth');
